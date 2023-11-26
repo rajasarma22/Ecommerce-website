@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(147,112,219);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: blue;
+}
+.name{
+  text-align: right;
+
+}
+</style>
+<body>
+<ul>
+
+  <li><a href="/name/">Student Details</a></li>
+
+</ul>
+
+<div class="container">
+  <center><h2><b>SHOW TABLE </b></h2></center>
+  <table class="table table-bordered">
+    <thead>
+      <tr bgcolor="blue">
+        <th bgcolor="red">id</th>
+        <th>r</th>
+        <th>password</th>
+        <th>address</th>
+        <th>department</th>
+        <th>year </th>
+      </tr>
+    </thead>
+    {% if key1 %}
+    <tbody>
+        {% for i in key1 %}
+          <tr>
+            <td bgcolor="red">{{i.id}}</td>
+            <td>{{i.rollnumber}}</td>
+            <td>{{i.password}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.department}}</td>
+            <td>{{i.year}}</td>
+
+          </tr>
+        {% endfor %}
+    </tbody>
+    {% endif %}
+  </table>
+
+</div>
+
+</body>
+</html>
+[9:51 pm, 29/05/2023] Sreehari: def data(request):
+    all_data = Techers.objects.all()
+    return render(request, "stddet.html", {"key1": all_data})
+[11:01 pm, 30/05/2023] Sreehari: https://youtu.be/VlQO6opxKRU
+[9:34 am, 31/05/2023] Sreehari: https://www.linkedin.com/groups/3990648
+[10:15 am, 04/06/2023] Sreehari: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <center><h2><b>SHOW TABLE </b></h2></center>
+  <table class="table table-bordered">
+    <thead>
+      <tr bgcolor="blue">
+        <th bgcolor="red">id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>password </th>
+        <th>Edit</th>
+        <th>Detect</th>
+      </tr>
+    </thead>
+    {% if key1 %}
+    <tbody>
+        {% for i in key1 %}
+          <tr>
+            <td bgcolor="red">{{i.id}}</td>
+            <td>{{i.Firstname}}</td>
+            <td>{{i.Lastname}}</td>
+            <td>{{i.Email}}</td>
+            <td>{{i.Contact}}</td>
+            <td>{{i.Password}}</td>
+          </tr>
+        {% endfor %}
+    </tbody>
+    {% endif %}
+  </table>
+
+</div>
+
+</body>
+</html>
